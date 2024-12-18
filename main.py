@@ -11,3 +11,9 @@ for paragraph in doc.paragraphs:
         run.font.size = Pt(14)
 # Путь к папке с документами
 folder_path = 'path/to/your/documents'  
+# Проходим по всем файлам в папке
+for filename in os.listdir(folder_path):
+    if filename.endswith('.docx'):
+        file_path = os.path.join(folder_path, filename)
+        format_docx(file_path)
+        print(f"Форматирование завершено для: {filename}")
