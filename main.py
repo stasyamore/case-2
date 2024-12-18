@@ -14,3 +14,6 @@ def format_docx(file_path):
             run.font.size = Pt(14)
  # Устанавливаем межстрочный интервал на 1.5
         paragraph.paragraph_format.line_spacing = 1.5
+   # cохраняем изменения
+    doc.save(file_path)
+    
